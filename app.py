@@ -63,7 +63,7 @@ def convert_document(doc_file, target_format):
         base_name = os.path.splitext(os.path.basename(doc_file))[0]
 
         # Output file name
-        output_file = f"document_converter_{base_name}.{target_format.lower()}"
+        output_file = f"flowly_ai_document_converter_{base_name}.{target_format.lower()}"
 
         # Use pypandoc to convert the file
         pypandoc.convert_file(
