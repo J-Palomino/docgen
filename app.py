@@ -1,25 +1,7 @@
 import gradio as gr
 import pypandoc
 import os
-from pdf2docx import Converter
-
-def ensure_pandoc_installed():
-    try:
-        # Try to access pandoc's version
-        pypandoc.get_pandoc_version()
-        print("Pandoc is already installed and accessible.")
-    except OSError:
-        # Attempt to download pandoc
-        print("Pandoc not found, downloading...")
-        pypandoc.download_pandoc()
-        print("Pandoc downloaded successfully.")
-    
-    # Explicitly set the path to the downloaded pandoc if needed
-    os.environ['PATH'] += os.pathsep + '/home/user/bin'
-    print("Pandoc path added to system environment.")
-
-# Pastikan Pandoc terpasang
-# ensure_pandoc_installed()
+# from pdf2docx import Converter
 
 # Daftar format yang didukung
 input_supported_formats = [data.upper() for data in sorted(list(pypandoc.get_pandoc_formats()[0]) or [
@@ -42,24 +24,24 @@ output_supported_formats = [data.upper() for data in sorted([
     "RST", "RTF", "S5", "SLIDEOUS", "SLIDY", "TEI", "TEXINFO", "TEXTILE", "TYPST", "XWIKI", "ZIMWIKI"
 ]) if data not in ['PDF']]
 
-def convert_pdf_to_docx(pdf_file):
-    """Konversi PDF ke DOCX menggunakan pdf2docx"""
-    output_docx = f"{os.path.splitext(pdf_file.name)[0]}.docx"
-    cv = Converter(pdf_file.name)
-    cv.convert(output_docx, start=0, end=None)
-    return output_docx
+# def convert_pdf_to_docx(pdf_file):
+#     """Konversi PDF ke DOCX menggunakan pdf2docx"""
+#     output_docx = f"{os.path.splitext(pdf_file.name)[0]}.docx"
+#     cv = Converter(pdf_file.name)
+#     cv.convert(output_docx, start=0, end=None)
+#     return output_docx
 
 def convert_document(doc_file, target_format):
     try:
         target_format = target_format.lower()
         
-        # If the file is a PDF, convert it to DOCX first
-        if isinstance(doc_file, str) and doc_file.lower().endswith('.pdf'):
-            print("Converting PDF to DOCX...")
-            doc_file = convert_pdf_to_docx(doc_file)  # Pass the file path directly
-            print("PDF converted to DOCX.")
-        elif hasattr(doc_file, 'name'):  # If it's a file-like object
-            doc_file = doc_file.name  # Get the file path from the file-like object
+        # # If the file is a PDF, convert it to DOCX first
+        # if isinstance(doc_file, str) and doc_file.lower().endswith('.pdf'):
+        #     print("Converting PDF to DOCX...")
+        #     doc_file = convert_pdf_to_docx(doc_file)  # Pass the file path directly
+        #     print("PDF converted to DOCX.")
+        # elif hasattr(doc_file, 'name'):  # If it's a file-like object
+        doc_file = doc_file.name  # Get the file path from the file-like object
 
         # Get the base name of the file (without extension)
         base_name = os.path.splitext(os.path.basename(doc_file))[0]
