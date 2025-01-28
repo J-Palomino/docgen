@@ -1,0 +1,4 @@
+gradio
+pandoc
+pypandoc
+pdf2docx
