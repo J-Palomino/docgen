@@ -27,7 +27,7 @@ input_supported_formats = [data.upper() for data in sorted(list(pypandoc.get_pan
     'MARKDOWN_MMD', 'MARKDOWN_PHPEXTRA', 'MARKDOWN_STRICT', 'MDOC', 'MEDIAWIKI', 'MUSE',
     'NATIVE', 'ODT', 'OPML', 'ORG', 'PDF', 'POD', 'RIS', 'RST', 'RTF', 'T2T', 'TEXTILE',
     'TIKIWIKI', 'TSV', 'TWIKI', 'TYPST', 'VIMWIKI'
-])]
+]) if data not in ['PDF']]
 
 output_supported_formats = [data.upper() for data in sorted([
     "ANSI", "ASCIIDOC", "ASCIIDOC_LEGACY", "ASCIIDOCTOR", "BEAMER", "BIBLATEX", "BIBTEX", "CHUNKEDHTML", 
@@ -38,7 +38,7 @@ output_supported_formats = [data.upper() for data in sorted([
     "MARKDOWN_MMD", "MARKDOWN_PHPEXTRA", "MARKDOWN_STRICT", "MARKUA", "MEDIAWIKI", "MS", 
     "MUSE", "NATIVE", "ODT", "OPENDOCUMENT", "OPML", "ORG", "PDF", "PLAIN", "PPTX", "REVEALJS", 
     "RST", "RTF", "S5", "SLIDEOUS", "SLIDY", "TEI", "TEXINFO", "TEXTILE", "TYPST", "XWIKI", "ZIMWIKI"
-])]
+]) if data not in ['PDF']]
 
 def convert_pdf_to_docx(pdf_file):
     """Konversi PDF ke DOCX menggunakan pdf2docx"""
