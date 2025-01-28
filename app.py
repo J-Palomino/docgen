@@ -3,19 +3,9 @@ import pypandoc
 import os
 # from pdf2docx import Converter
 
-def check_pandoc_installation():
-    try:
-        # Memastikan pandoc tersedia
-        pandoc_path = pypandoc.get_pandoc_version()
-        print(f"Pandoc version is: {pandoc_path}")
-    except OSError as e:
-        print("Pandoc tidak ditemukan. Pesan error:")
-        print(e)
-        pypandoc.download_pandoc()
-
-# Panggil fungsi untuk cek instalasi
-check_pandoc_installation()
-
+try: pypandoc.get_pandoc_version()
+except OSError: pypandoc.download_pandoc()
+    
 # Daftar format yang didukung
 input_supported_formats = [data.upper() for data in sorted(list(pypandoc.get_pandoc_formats()[0]) or [
     'BIBLATEX', 'BIBTEX', 'BITS', 'COMMONMARK', 'COMMONMARK_X', 'CREOLE', 'CSLJSON', 'CSV',
