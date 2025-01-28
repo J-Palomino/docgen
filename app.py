@@ -3,8 +3,6 @@ import pypandoc
 import os
 # from pdf2docx import Converter
 
-pypandoc.pandoc_download.download_pandoc()
-
 # Daftar format yang didukung
 input_supported_formats = [data.upper() for data in sorted(list(pypandoc.get_pandoc_formats()[0]) or [
     'BIBLATEX', 'BIBTEX', 'BITS', 'COMMONMARK', 'COMMONMARK_X', 'CREOLE', 'CSLJSON', 'CSV',
