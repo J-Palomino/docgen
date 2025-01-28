@@ -70,9 +70,6 @@ def convert_document(doc_file, target_format):
             doc_file, 
             target_format.lower(),  # Convert the format to lowercase
             outputfile=output_file,
-            extra_args=['-V geometry:margin=1.5cm',
-                        # '--pdf-engine=/usr/bin/xelatex',
-                        '--metadata', 'title="Converted Document by Flowly AI"']
         )
 
         return output_file
