@@ -85,7 +85,7 @@ interface = gr.Interface(
     ],
     outputs=gr.File(label="Converted Document"),
     title="Document Format Converter",
-    description="Upload a document and select any target format for conversion.",
+    description="Upload document and select target format for conversion.",
     css="footer {visibility: hidden}"
 )
 
