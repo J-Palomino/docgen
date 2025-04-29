@@ -1,0 +1,6 @@
+gradio>=3.40.1
+pypandoc
+pdf2docx
+python-docx
+flask
+python-multipart

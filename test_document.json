@@ -1,0 +1,65 @@
+{
+  "body": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is a test document created for API testing.",
+          "bold": true,
+          "italic": false
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is a normal paragraph with ",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "some italic text",
+          "bold": false,
+          "italic": true
+        },
+        {
+          "text": " and ",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "some bold text",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": ".",
+          "bold": false,
+          "italic": false
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "runs": [
+        {
+          "text": "This is a Heading 1",
+          "bold": false,
+          "italic": false
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is a paragraph after the heading.",
+          "bold": false,
+          "italic": false
+        }
+      ]
+    }
+  ]
+}

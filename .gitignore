@@ -1,0 +1,23 @@
+# Virtual environments
+venv/
+deploy_venv/
+
+# Environment variables
+.env
+
+# Temporary files
+*.tmp
+*.temp
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Railway local files
+.railway/
+
+# Converted documents
+converted_document.docx
+
+# OS specific files
+.DS_Store
+Thumbs.db

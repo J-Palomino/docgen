@@ -1,0 +1,29 @@
+{
+  "document": {
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 1,
+        "runs": [
+          {
+            "text": "Sample Document",
+            "bold": true,
+            "italic": false,
+            "underline": false
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "runs": [
+          {
+            "text": "This is a sample document for testing the API.",
+            "bold": false,
+            "italic": false,
+            "underline": false
+          }
+        ]
+      }
+    ]
+  }
+}

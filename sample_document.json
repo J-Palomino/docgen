@@ -1,0 +1,72 @@
+{
+  "document": {
+    "blocks": [
+      {
+        "runs": [
+          {
+            "bold": false,
+            "italic": false,
+            "text": "Sample Document",
+            "underline": false
+          }
+        ],
+        "type": "paragraph"
+      },
+      {
+        "runs": [
+          {
+            "bold": false,
+            "italic": false,
+            "text": "This is a sample document created for testing the Document Format Converter API. This text is bold. This text is italic. This text is underlined.",
+            "underline": false
+          }
+        ],
+        "type": "paragraph"
+      },
+      {
+        "runs": [
+          {
+            "bold": false,
+            "italic": false,
+            "text": "Section 1",
+            "underline": false
+          }
+        ],
+        "type": "paragraph"
+      },
+      {
+        "runs": [
+          {
+            "bold": false,
+            "italic": false,
+            "text": "This is a paragraph in section 1. It contains regular text.",
+            "underline": false
+          }
+        ],
+        "type": "paragraph"
+      },
+      {
+        "runs": [
+          {
+            "bold": false,
+            "italic": false,
+            "text": "Section 2",
+            "underline": false
+          }
+        ],
+        "type": "paragraph"
+      },
+      {
+        "runs": [
+          {
+            "bold": false,
+            "italic": false,
+            "text": "This paragraph has text with different font size.",
+            "underline": false
+          }
+        ],
+        "type": "paragraph"
+      }
+    ]
+  }
+}
